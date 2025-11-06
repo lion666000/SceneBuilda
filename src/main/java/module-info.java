@@ -1,6 +1,7 @@
 module com.example.scenebuilda {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.base;
 
 
     opens com.example.scenebuilda to javafx.fxml;
