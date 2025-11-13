@@ -38,9 +38,9 @@
                   <Label text="  Heslo:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                   <TextField fx:id="prijmeni" GridPane.columnIndex="3" />
                   <TextField fx:id="login" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <PasswordField GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <PasswordField fx:id="password" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                   <DatePicker fx:id="datumNarozeni" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <ColorPicker GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <ColorPicker fx:id="color" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                </children>
             </GridPane>
          </children>
@@ -67,6 +67,8 @@
       <HBox prefHeight="28.0" prefWidth="654.0">
          <children>
             <Button fx:id="registrovat" mnemonicParsing="false" onAction="#onRegisterButtonClick" text="Registrovat" />
+            <Button fx:id="vypsatVsechny" mnemonicParsing="false" onAction="#onVypsatVsechnyButtonClick" text="Vypsat všechny" />
+            <Button fx:id="zajimavosti" mnemonicParsing="false" onAction="#onVypsatZajimavostiButtonClick" text="Zajímavosti" />
          </children>
       </HBox>
       <HBox prefHeight="165.0" prefWidth="654.0">
