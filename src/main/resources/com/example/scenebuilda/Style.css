@@ -1,0 +1,25 @@
+.root {
+    -fx-background-color: rgb(184, 184, 148);
+    -fx-background-image: mole_rat.jpg;
+}
+
+.button {
+    -fx-text-fill: black;
+    -fx-background-color: rgb(255, 194, 102);
+}
+
+.button:hover {
+    -fx-background-color: rgb(255, 153, 0);
+}
+
+.text-field {
+    -fx-background-color: rgb(255, 214, 153);
+}
+
+.text-area {
+    -fx-background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS97UAkpTHHvxflKnTyn6u3M6iUSecUO2VPGEr-uQ1RRVo4WA2n7LnYK_1sjT--lCeEY_h5LT6GjtUPXo-Qfe4IuDrXod0qHt4tn9dnJhHnoQ&s=10);
+}
+
+.label {
+    -fx-font-family: "Comic Sans MS";
+}
