@@ -21,6 +21,7 @@ public class Jazyky {
         jazyky.add(sp);
     }
 
+
     public String toString(){
         String aJ;
         String cJ;

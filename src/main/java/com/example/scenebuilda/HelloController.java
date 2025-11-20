@@ -55,7 +55,7 @@ public class HelloController {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
 
-    ArrayList<Uzivatel> uzivatele = new ArrayList<Uzivatel>();
+    private ArrayList<Uzivatel> uzivatele = new ArrayList<Uzivatel>();
 
 
     @FXML
@@ -96,6 +96,7 @@ public class HelloController {
             Jazyky jazyky = new Jazyky(aJ, cJ, nE, sP);
             Uzivatel uzivatel = new Uzivatel(jmenoJav, prijmeniJav, datumJav, loginJav, passwordJav, colorJav, jazyky);
             uzivatele.add(uzivatel);
+            uzivatel.setPocetJazyku(pocetOvladanychJazyku);
             for (Uzivatel u : uzivatele) {
                 System.out.println(u.toString());
             }
@@ -120,6 +121,8 @@ public class HelloController {
 
     @FXML
     protected void onVypsatZajimavostiButtonClick() {
+        String vystup = "";
+
         LocalDate nejmladsi = LocalDate.of(1, 1, 1);
         for  (Uzivatel u : uzivatele) {
             if (u.getDatumNarozeni().isAfter(nejmladsi)){
@@ -128,9 +131,18 @@ public class HelloController {
         }
         for  (Uzivatel u : uzivatele) {
             if (u.getDatumNarozeni().equals(nejmladsi)){
-                poznamky.setText("Nejmladší: " + u.getJmeno().toString());
+                vystup = vystup + "\n"  + "Nejmladší: " + u.getPrijmeni().toString();
             }
         }
+
+        Uzivatel nejviceJazyku = uzivatele.get(0);
+        for (Uzivatel u : uzivatele) {
+            if (u.getPocetJazyku() >= nejviceJazyku.getPocetJazyku()) {
+                nejviceJazyku = u;
+            }
+        }
+        vystup = vystup + "\n"  + "Uživatel, který ovládá nejvíce jazyků: " + nejviceJazyku.getJmeno().toString();
+        poznamky.setText(vystup);
 
         poznamky.setWrapText(true);
     }

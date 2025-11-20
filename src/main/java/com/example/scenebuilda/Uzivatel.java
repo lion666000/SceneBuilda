@@ -18,6 +18,8 @@ public class Uzivatel {
     private String heslo;
     private Color barva;
     private Jazyky jazyky;
+    private int pocetJazyku;
+
 
     public Uzivatel(String jmeno, String prijmeni, LocalDate datumNarozeni, String login, String heslo, Color barva, Jazyky jazyky) {
         this.jmeno = jmeno;
@@ -29,13 +31,8 @@ public class Uzivatel {
         this.jazyky = jazyky;
     }
 
-    public Uzivatel(String jmeno, String prijmeni, LocalDate datumNarozeni, String login, String heslo, Color barva) {
-        this.jmeno = jmeno;
-        this.prijmeni = prijmeni;
-        this.datumNarozeni = datumNarozeni;
-        this.login = login;
-        this.heslo = heslo;
-        this.barva = barva;
+    public void setPocetJazyku(int pocetJazyku) {
+        this.pocetJazyku = pocetJazyku;
     }
 
     public String getJmeno() {
@@ -52,6 +49,10 @@ public class Uzivatel {
 
     public void setDatumNarozeni(LocalDate datumNarozeni) {
         this.datumNarozeni = datumNarozeni;
+    }
+
+    public int getPocetJazyku() {
+        return pocetJazyku;
     }
 
     @Override
